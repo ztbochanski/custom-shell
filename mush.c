@@ -49,7 +49,7 @@ int start_process(char **arguments)
   pid_t process_id;
   char *builtin = "cd";
 
-  if (strcmp(arguments[0], builtin))
+  if (strcmp(arguments[0], builtin) == 0)
   {
     if (chdir(arguments[1]) != 0)
     {
