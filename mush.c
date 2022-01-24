@@ -32,11 +32,11 @@ char **parse_input(char *input)
   char **tokens = malloc(buffer * sizeof(char *));
   int array_index = 0;
 
-  token = strtok(input, " ");
+  token = strtok(input, " \n");
   while (token != NULL)
   {
     tokens[array_index] = token;
-    token = strtok(NULL, " ");
+    token = strtok(NULL, " \n");
     tokens = realloc(tokens, buffer * sizeof(char *));
     array_index++;
   }
